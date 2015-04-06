@@ -10,6 +10,26 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require bootstrap_and_overrides
  *= require_self
  */
+.dropdown-menu::before {
+content: '';
+display: inline-block;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 6px solid #CCC;
+position: absolute;
+top: -7px;
+left: 9px;
+}
+.dropdown-menu::after {
+content: '';
+display: inline-block;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 6px solid white;
+position: absolute;
+top: -6px;
+left: 9px;
+}

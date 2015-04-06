@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %title= "expr-show"
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    /= javascript_include_tag "highcharts.js", "chartkick"
+    = csrf_meta_tags
+  %body{style: "padding-top:70px;"}
+    = render 'layouts/navigation'
+    #main{:role => "main"}
+      .container
+        .content
+          .row
+            .span12
+              = yield
+    .container
+      = render "layouts/footer"
