@@ -49,4 +49,4 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
 end
-
+gem 'puma', '~> 2.3.2'
